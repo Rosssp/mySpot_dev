@@ -1,0 +1,46 @@
+.mapWrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.spot__mark {
+    cursor: pointer;
+    font-size: 64px;
+    width: max-content;
+    padding: 4px 14px;
+    transform-style: flat;
+    transform: rotateX(12deg);
+    font-family: "Black";
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+}
+.spot__score {
+    right: 0;
+    top: 0;
+    transform: translateX(98%);
+    padding: 4px 14px;
+    background-color: white;
+    position: absolute;
+    font-family: "Regular";
+    font-weight: 600;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.addNewSpot {
+    position: absolute;
+    z-index: 20;
+    bottom: 94px;
+    right: 12px;
+    width: max-content;
+    height: max-content;
+}
+
+.map {
+    & > ymaps {
+        @media (min-width: 1025px) and (max-width: 1537px) and (-webkit-min-device-pixel-ratio: 1.25) {
+            zoom: 0.75;
+        }
+    }
+}

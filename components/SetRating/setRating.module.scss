@@ -1,0 +1,27 @@
+.send_score {
+    position: absolute;
+    width: 36px;
+    transition: 0.2s all ease-in-out;
+    overflow: hidden;
+    &:hover {
+        width: 150px;
+    }
+    & > ul {
+        padding: 6px 8px;
+        width: 150px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        & > li {
+            width: 24px;
+            height: 24px;
+            & img {
+                opacity: 0.5;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

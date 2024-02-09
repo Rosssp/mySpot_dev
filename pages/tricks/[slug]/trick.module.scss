@@ -1,0 +1,31 @@
+.title {
+    text-transform: uppercase !important;
+}
+.slider {
+    height: 420px;
+    @media (max-width: 1920px) {
+        height: calc(180px + (420 - 180) * ((100vw - 420px) / (1920 - 420)));
+    }
+}
+.description {
+    margin-top: 14px;
+    font-size: 48px !important;
+    @media (max-width: 580px) {
+        font-size: 28px !important;
+    }
+}
+
+.anotherTricks {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    row-gap: 36px;
+    gap: 4%;
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+.wrapper {
+    overflow: auto;
+    position: relative;
+}

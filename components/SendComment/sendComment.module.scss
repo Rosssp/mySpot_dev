@@ -1,0 +1,27 @@
+.write_message {
+    width: 100%;
+    background-color: black;
+    height: 40px;
+    & > * {
+        border: none;
+        font-size: 32px;
+        font-family: "Regular";
+        height: 100%;
+        background-color: transparent;
+        color: white;
+        display: inline-block;
+    }
+    & input {
+        max-width: 90%;
+        min-width: 90%;
+    }
+    & button {
+        cursor: pointer;
+        width: 10%;
+        height: 100%;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        & > p {
+            transform: translateY(-3px);
+        }
+    }
+}

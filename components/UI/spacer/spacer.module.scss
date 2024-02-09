@@ -1,0 +1,39 @@
+.xs {
+    height: 20px;
+    user-select: none;
+    @media (max-width: 480px) {
+        height: calc(20px / 2);
+    }
+}
+
+.sm {
+    height: 30px;
+    user-select: none;
+    @media (max-width: 480px) {
+        height: calc(30px / 2);
+    }
+}
+
+.md {
+    height: 40px;
+    user-select: none;
+    @media (max-width: 480px) {
+        height: calc(40px / 2);
+    }
+}
+
+.lg {
+    height: 70px;
+    user-select: none;
+    @media (max-width: 480px) {
+        height: calc(70px / 2);
+    }
+}
+
+.xl {
+    height: 180px;
+    user-select: none;
+    @media (max-width: 480px) {
+        height: calc(180px / 2);
+    }
+}

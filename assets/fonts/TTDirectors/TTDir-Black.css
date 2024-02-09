@@ -1,0 +1,8 @@
+/* Webfont: Humane-Thin */
+@font-face {
+    font-family: "Black";
+    src: url("TTDirectors-Black.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+    text-rendering: optimizeLegibility;
+}

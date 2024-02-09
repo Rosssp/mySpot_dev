@@ -1,0 +1,181 @@
+.spot {
+    width: max-content;
+    height: max-content;
+    transform-style: flat;
+    transform: rotateX(12deg);
+    font-family: "Black";
+    background-color: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(2px);
+    padding: 7px;
+
+    &__mark {
+        text-transform: uppercase;
+        font-size: 36px;
+        width: max-content;
+        cursor: pointer;
+        padding: 0;
+        line-height: 95%;
+    }
+    &__aside {
+        right: 0;
+        top: 0;
+        transform: translateX(98%);
+        position: absolute;
+        width: max-content;
+        & > * {
+            text-align: center;
+            padding: 4px 8px;
+            background-color: white;
+            font-weight: 600;
+            background-color: rgba(255, 255, 255, 1);
+            &:nth-child(1) {
+                font-weight: 400;
+                cursor: pointer;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+        & .send_score {
+            position: absolute;
+            width: 100%;
+            transition: 0.2s all ease-in-out;
+            overflow: hidden;
+            &:hover {
+                width: 150px;
+            }
+            & > ul {
+                padding: 6px 8px;
+                width: 150px;
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                & > li {
+                    width: 24px;
+                    height: 24px;
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.spot__open {
+    // width: 320px;
+    width: 360px;
+    height: max-content;
+    position: relative;
+    transition: all 2s ease-in-out;
+
+    & > *::-webkit-scrollbar {
+        width: 5px;
+        background-color: rgba(0, 0, 0, 0.1) !important;
+    }
+    & .image {
+        height: 180px;
+        width: 100%;
+        position: relative;
+        & img {
+            object-fit: cover;
+        }
+    }
+    & .about {
+        margin-top: 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .left__title {
+            font-size: 54px;
+            text-transform: uppercase;
+            line-height: 75% !important;
+        }
+        & .left__bottom {
+            & > * {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 30px;
+                font-family: "Regular";
+            }
+            & .user {
+                & span {
+                    cursor: pointer;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        & .about__right {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: right;
+            gap: 4px;
+            align-self: flex-start;
+            // flex: 1;
+            width: 50%;
+            & > * {
+                opacity: 0.3;
+                letter-spacing: 1px;
+                font-size: 24px !important;
+                background-color: black;
+                color: white;
+                padding: 0 4px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .descr {
+        height: 100%;
+        max-height: 80px;
+        overflow: auto;
+        padding-right: 4px;
+    }
+
+    & .user__image {
+        background-color: black;
+        border-radius: 50%;
+        height: 32px;
+        width: 30px;
+        overflow: hidden;
+        &_small {
+            height: 26px;
+            width: 24px;
+        }
+    }
+}
+
+.active {
+    opacity: 1 !important;
+}
+
+.unlogin {
+    min-height: 250px;
+    position: relative;
+    &_message {
+        z-index: 20;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        text-align: center;
+        & button {
+            margin-top: 4px;
+            width: 100%;
+        }
+    }
+    & .blur {
+        z-index: 19;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(128, 128, 128, 0.2);
+        filter: blur(10px);
+    }
+}

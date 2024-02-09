@@ -1,0 +1,26 @@
+.wrapper {
+    overflow: auto;
+    position: relative;
+    align-items: center;
+    @media (min-width: 1025px) and (max-width: 1537px) and (-webkit-min-device-pixel-ratio: 1.25) {
+        zoom: 0.75;
+    }
+}
+
+.raiting_layout {
+    height: max-content;
+    margin: 0 auto;
+    width: 60%;
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
+}
+.raiting_container {
+    width: 100%;
+}
+.buttons {
+    & > * {
+        transition: 0.2s all ease-in-out;
+        width: 50%;
+    }
+}

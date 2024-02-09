@@ -1,0 +1,52 @@
+.input__wrapper {
+    position: relative;
+    height: max-content;
+    font-size: 36px;
+    font-family: "Regular";
+    &::before {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background: black;
+        transition: var(--transition-default);
+    }
+    &:has(.input:focus) {
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
+.input {
+    transition: var(--transition-default);
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-left: 8px;
+    line-height: 10px;
+    & input:-webkit-autofill {
+        -webkit-box-shadow: inset 0 0 0 50px #ffffff !important; /* Цвет фона */
+        -webkit-text-fill-color: #000000 !important; /* цвет текста */
+        color: #000000 !important; /* цвет текста */
+    }
+    & input {
+        outline: none;
+        &::placeholder {
+            font-size: 32px;
+        }
+    }
+
+    &:focus {
+        // border-bottom: 1px solid black;
+    }
+}
+
+.error {
+    border-bottom: 1px solid rgba(255, 0, 0);
+    &:focus {
+        border-bottom: 1px solid rgba(255, 0, 0);
+    }
+}

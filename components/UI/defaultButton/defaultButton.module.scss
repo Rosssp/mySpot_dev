@@ -1,0 +1,95 @@
+.withOutBG {
+    background-color: transparent !important;
+    padding: 0 !important;
+    color: black !important;
+    &::before {
+        content: none !important;
+    }
+}
+.staticActive {
+    transition: 0.2s all ease-in-out;
+    &::before {
+        height: 99% !important;
+    }
+}
+
+.default,
+.withOutBG,
+.staticActive {
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 14px 24px;
+    position: relative;
+    overflow: hidden;
+    & > p {
+        text-transform: uppercase;
+        font-family: "Bold";
+        mix-blend-mode: difference;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+    }
+    &:has(.spinner) {
+        opacity: 0.9;
+        & > p {
+            visibility: hidden;
+        }
+    }
+    &::before {
+        transition: var(--transition-default);
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        margin: 0 auto;
+        background-color: white;
+    }
+
+    &:hover::before {
+        height: 99%;
+    }
+}
+
+.spinner {
+    animation: rotate 2s linear infinite;
+    z-index: 2;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 18%;
+    height: 64%;
+    width: auto;
+    & .path {
+        stroke: #ffffff;
+        stroke-linecap: round;
+        animation: dash 1.5s ease-in-out infinite;
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}

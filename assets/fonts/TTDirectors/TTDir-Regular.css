@@ -1,0 +1,8 @@
+/* Webfont: Humane-Thin */
+@font-face {
+    font-family: "Regular";
+    src: url("TTDirectors-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}

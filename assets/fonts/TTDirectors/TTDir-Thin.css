@@ -1,0 +1,8 @@
+/* Webfont: Humane-Thin */
+@font-face {
+    font-family: "Thin";
+    src: url("TTDirectors-Thin.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}

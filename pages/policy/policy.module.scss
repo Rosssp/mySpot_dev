@@ -1,0 +1,12 @@
+.wrapper {
+    overflow: auto;
+    position: relative;
+
+    & > p {
+        font-family: "Regular" !important;
+        font-size: 36px !important;
+        font-weight: 600;
+        letter-spacing: 1px;
+        opacity: 0.7;
+    }
+}

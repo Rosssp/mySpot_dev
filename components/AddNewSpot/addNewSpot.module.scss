@@ -1,0 +1,30 @@
+.add_spot {
+    font-size: 28px;
+    position: absolute;
+    z-index: 200;
+    position: absolute;
+    bottom: 94px;
+    right: 12px;
+    width: max-content;
+    height: max-content;
+    @media (min-width: 1025px) and (max-width: 1537px) and (-webkit-min-device-pixel-ratio: 1.25) {
+        zoom: 0.75;
+    }
+}
+.buttons {
+}
+.placeMark {
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    line-height: 20px;
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+}
+.spotPopup {
+    z-index: 100;
+    position: absolute;
+    width: max-content;
+    height: 100%;
+}

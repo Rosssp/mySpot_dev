@@ -1,0 +1,294 @@
+// @import url("assets/fonts/Humane/Humane-Light.css");
+// @import url("assets/fonts/Humane/Humane-Bold.css");
+// @import url("assets/fonts/Humane/Humane-Medium.css");
+
+@import url("assets/fonts/TTDirectors/TTDir-Bold.css");
+@import url("assets/fonts/TTDirectors/TTDir-Regular.css");
+@import url("assets/fonts/TTDirectors/TTDir-Thin.css");
+@import url("assets/fonts/TTDirectors/TTDir-Black.css");
+
+:root {
+    --bg-color-white: white;
+    --text-color-white: white;
+    --black-color: black;
+    --dark-color: #505050;
+
+    --transition-default: 0.5s all ease-in-out;
+
+    --link-animation: coverUp 0.4s ease-in-out forwards;
+
+    --default-bg-moving-gradient: linear-gradient(to right, rgb(203 203 203) 8%, rgb(222, 222, 222) 18%, rgb(199 199 199) 33%) !important;
+    // --default-bg-moving-gradient: linear-gradient(
+    //     to right,
+    //     rgb(203 203 203) 15%,
+    //     rgb(215 215 215) 46%,
+    //     rgb(197 197 197) 96%
+    // ) !important;
+}
+p {
+    font-size: 32px;
+    font-family: "Regular";
+    @media (max-width: 480px) {
+        font-size: calc(32px / 1.5);
+    }
+}
+h1 {
+    font-size: 72px;
+    // letter-spacing: 4px;
+    font-family: "Black";
+    @media (max-width: 480px) {
+        font-size: calc(72px / 1.5);
+    }
+}
+h2 {
+    font-size: 48px;
+    font-family: "Black";
+    @media (max-width: 480px) {
+        font-size: calc(48px / 1.5);
+    }
+}
+h3 {
+    opacity: 0.8;
+    font-size: 36px;
+    font-family: "Black";
+    @media (max-width: 480px) {
+        font-size: calc(36px / 1.5);
+    }
+}
+div {
+    position: relative;
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        user-select: none;
+        pointer-events: none;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: smooth !important;
+        animation-timing-function: ease-in-out !important;
+    }
+}
+
+a {
+    color: black;
+    font-family: "Regular";
+    text-decoration: none;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        mix-blend-mode: difference;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        opacity: 0;
+    }
+    &:hover::before {
+        opacity: 1;
+        animation: var(--link-animation);
+    }
+    &::after {
+        content: "";
+        transition: opacity 0.3s;
+    }
+
+    &:hover::after {
+        opacity: 0;
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
+
+@keyframes coverUp {
+    0% {
+        transform-origin: 50% 100%;
+        transform: scale3d(1, 0.045, 1);
+    }
+
+    50% {
+        transform-origin: 50% 100%;
+        transform: scale3d(1, 1, 1);
+    }
+
+    51% {
+        transform-origin: 50% 0%;
+        transform: scale3d(1, 1, 1);
+    }
+
+    100% {
+        transform-origin: 50% 0%;
+        transform: scale3d(1, 0, 1);
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* or add it to the track */
+}
+*::-webkit-scrollbar-thumb {
+    background: #000;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    background-color: rgb(255, 255, 255);
+    font-family: "Bold";
+    background-color: black;
+}
+*::selection {
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+article > * + * {
+    margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+input {
+    outline: none;
+}
+
+#root {
+    min-height: 100%;
+}
+// .element::-webkit-scrollbar {
+//     width: 0;
+// }
+
+// ::-webkit-scrollbar {
+//     width: 0;
+// }
+
+.main__wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    @media (max-width: 1450px) {
+        padding: 0 10px;
+    }
+}
+.main__height {
+    min-height: 100vh;
+}
+
+.ymaps3x0--map-copyrights_bottom {
+    bottom: 68px !important;
+}
+
+.ymaps3x0--marker {
+    width: 34px;
+    height: 34px;
+}
+
+.ymaps3x0--controls_bottom {
+    bottom: 154px !important;
+}
+.ymaps3x0--control {
+    border-radius: 0 !important;
+    background-color: #000 !important;
+    & > * {
+        background-color: #000 !important;
+    }
+}
+.ymaps3x0--marker {
+    width: max-content;
+    height: max-content;
+    & > * {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+}
+.ymaps3x0--geolocation-control-self-ru {
+    display: none !important;
+}
+
+.base-page-size {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.swiper-button-disabled {
+    opacity: 0.5;
+}
+
+// body {
+//     @media (min-width: 1025px) and (max-width: 1537px) and (-webkit-min-device-pixel-ratio: 1.25) {
+//         zoom: 0.75;
+//         & #__next {
+//             height: 150vh;
+//             & > * {
+//                 &:nth-child(2) {
+//                     & * {
+//                         height: 150vh;
+//                         position: relative;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

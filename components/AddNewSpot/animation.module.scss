@@ -1,0 +1,27 @@
+.contentEnter {
+    opacity: 0;
+    transform: translateX(-2vw);
+}
+
+.contentEnterActive {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 300ms, transform 300ms;
+    transition-delay: 10ms;
+    transition-timing-function: ease-in-out;
+}
+
+.contentExit {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 300ms, transform 300ms;
+    transition-delay: 10ms;
+    transition-timing-function: ease-in-out;
+}
+
+.contentExitActive {
+    transition: opacity 300ms, transform 300ms;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+    transform: translateX(-4vw);
+}
